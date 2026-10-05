@@ -187,7 +187,7 @@ class _AddPageState extends State<AddPage> {
     return Padding(padding: const EdgeInsets.only(top: 10), child: TextField(
         controller: c[k], maxLines: lines, keyboardType: num ? TextInputType.number : null,
         decoration: InputDecoration(labelText: l, border: const OutlineInputBorder(),
-            helperText: (cf is num && cf < 0.6) ? 'Please verify this information.' : null,
+               helperText: ((cf is int || cf is double) && cf < 0.6) ? 'Please verify this information.' : null,
             helperStyle: const TextStyle(color: Colors.orange))));
   }
 
